@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>time offset with SNTP</title>
+
+<style>
+    table {  font-family: monospace }
+    table.based, table.r1 { border-collapse: collapse; }
+    td.host { padding-left: 1ex }
+    tr { margin : 0ex; padding: 0 }
+    td { padding: 0ex; padding-left: 1ex }
+    td.sign { padding-left: 0.0ex; padding-right: 0.1ex; font-weight: bold; font-size: 120%}
+    td.tar { text-align: right; }
+    td.pl  { padding-left: 1ex }
+    td.td1 { padding: 0ex }
+    .avgcld { font-family: monospace }
+    .fparent {
+	  display: flex;
+	  flex-flow: row wrap;
+	  /* height: 90vh; */
+	  align-content: flex-start;
+	  align-items: flex-start;
+    }
+    
+    .fchild { 
+	flex-shrink: 0;
+	border-style: solid;
+	border-width: 2px; 
+	padding: 0.5ex;
+    }
+    
+    .ret10 { 
+        font-family: sans-serif; 
+    }
+    </style>
+</head>
+<body>
+    <div class='ret10'>
+        <p>2022/01/20 - I am retiring this web app.  Below is the last or near-last live output
+            from <a href='https://kwynn.com/'>kwynn.com</a>.</p>
+        
+        <p><a href='https://github.com/kwynncom/sntp-web-display'>This source code</a> is on GitHub.  The features of this have 
+            largely been replaced by <a href='https://kwynn.com/t/21/10/chm/'>another page</a> on my site.
+        </p>
+    </div>
+    
+	<div> <!-- the whole dynamic output of SNTP -->
+    <table style="margin-bottom: 1ex"><caption style="text-align: left; font-weight: bold">&nbsp;&nbsp;chrony</caption>
+<tr><td>+2.289&#181;s</td></tr>
+<tr><td>&nbsp;1:54:34 AM Thu 01/20 - server time</td></tr>
+<tr><td>&nbsp;1:52:44 AM Thu 01/20 - last sync time</td></tr>
+<tr><td>&nbsp;1027 update interval</td></tr>
+</table>
+<table>
+<tr><th>avg d</th><th>cnt</th><th>end</th><th>begin</th></tr>
+<tr><td class='tar td1'>-0.138</td><td>822</td><td>01:54:34 01/20/2022</td><td>18:47:11 12/03/2019</td></tr>
+<tr><td class='tar td1'>-0.079</td><td>12</td><td>01:54:34 01/20/2022</td><td>01:24:13 01/20/2022</td></tr>
+</table>
+<table>
+<tr><th>cld</th><th>outd</th><th>ind</th><th>fam</th><th>host</th><th>st</th><th colspan="2"></th>
+<tr><td class='tar td1'>-0.065</td><td class='tar pl'>4.791</td><td class='tar pl'>4.660</td><td>VATe</td><td class='host'>ntp-1</td><td>2</td><td>01:54:34 01/20</td><td>824</td></tr>
+<tr><td class='tar td1'>-0.049</td><td class='tar pl'>0.150</td><td class='tar pl'>0.052</td><td>AWS-</td><td class='host'></td><td>3</td><td>01:49:14 01/20</td><td>823</td></tr>
+<tr><td class='tar td1'>0.090</td><td class='tar pl'>3.018</td><td class='tar pl'>3.198</td><td>NIST</td><td class='host'>:27]</td><td>1</td><td>01:49:10 01/20</td><td>822</td></tr>
+<tr><td class='tar td1'>-0.018</td><td class='tar pl'>4.897</td><td class='tar pl'>4.861</td><td>VATe</td><td class='host'>ntp-4</td><td>2</td><td>01:48:40 01/20</td><td>821</td></tr>
+<tr><td class='tar td1'>-0.218</td><td class='tar pl'>3.133</td><td class='tar pl'>2.696</td><td>NIST</td><td class='host'>:26]</td><td>1</td><td>01:30:23 01/20</td><td>820</td></tr>
+<tr><td class='tar td1'>-0.099</td><td class='tar pl'>0.250</td><td class='tar pl'>0.053</td><td>AWS-</td><td class='host'></td><td>3</td><td>01:29:59 01/20</td><td>819</td></tr>
+<tr><td class='tar td1'>-0.105</td><td class='tar pl'>3.357</td><td class='tar pl'>3.147</td><td>NIST</td><td class='host'>:27]</td><td>1</td><td>01:29:37 01/20</td><td>818</td></tr>
+<tr><td class='tar td1'>-0.102</td><td class='tar pl'>4.900</td><td class='tar pl'>4.696</td><td>VATe</td><td class='host'>ntp-3</td><td>2</td><td>01:29:23 01/20</td><td>817</td></tr>
+<tr><td class='tar td1'>-0.190</td><td class='tar pl'>4.930</td><td class='tar pl'>4.551</td><td>VATe</td><td class='host'>ntp-2</td><td>2</td><td>01:27:47 01/20</td><td>816</td></tr>
+<tr><td class='tar td1'>0.012</td><td class='tar pl'>3.143</td><td class='tar pl'>3.168</td><td>NIST</td><td class='host'>:26]</td><td>1</td><td>01:26:46 01/20</td><td>815</td></tr>
+<tr><td class='tar td1'>-0.138</td><td class='tar pl'>4.836</td><td class='tar pl'>4.560</td><td>VATe</td><td class='host'>ntp-1</td><td>2</td><td>01:26:25 01/20</td><td>814</td></tr>
+<tr><td class='tar td1'>-0.067</td><td class='tar pl'>0.179</td><td class='tar pl'>0.045</td><td>AWS-</td><td class='host'></td><td>3</td><td>01:24:13 01/20</td><td>813</td></tr>
+</table>
+<div class="fparent">
+<div class="fchild">
+<table style="font-family: monospace" class="r1">
+<tr><td>&nbsp;&nbsp;12345678</td><td></td><td>decimal places</td></tr>
+<tr><td> 0.000065</td><td class="sign">-</td><td>clock offset / error</td></tr>
+<tr><td>0.0048</td><td class="sign">+</td><td>outgoing delay</td></tr>
+<tr><td>0.0047</td><td class="sign">+</td><td>incoming delay</td></tr>
+<tr><td>0.00006601</td><td></td><td>server   delay</td></tr>
+<tr><td>2 stratum</td><td></td><td colspan='1'>ntp-1.vt.edu VATech</td></tr>
+<tr><td colspan='2'>824</td><td>seq</td></tr>
+</table>
+<table style="margin-top: 1ex" class="based"> 
+<tr><td>1642661674 (01:54:34 01/20/2022)</td></tr>
+<tr><td>0.715268</td></tr>
+<tr><td>0.72005868074484</td></tr>
+<tr><td>0.7200265 </td></tr>
+<tr><td>0.72012468590401</td></tr>
+<tr><td>0.724785</td></tr>
+</table>
+</div>
+<div class="fchild">
+<table style="font-family: monospace" class="r1">
+<tr><td>&nbsp;&nbsp;12345678</td><td></td><td>decimal places</td></tr>
+<tr><td> 0.000049</td><td class="sign">-</td><td>clock offset / error</td></tr>
+<tr><td>0.0001</td><td class="sign">+</td><td>outgoing delay</td></tr>
+<tr><td>0.0001</td><td class="sign">+</td><td>incoming delay</td></tr>
+<tr><td>0.00002025</td><td></td><td>server   delay</td></tr>
+<tr><td>3 stratum</td><td></td><td colspan='1'>169.254.169.123 AWS-internal</td></tr>
+<tr><td colspan='2'>823</td><td>seq</td></tr>
+</table>
+<table style="margin-top: 1ex" class="based"> 
+<tr><td>1642661354 (01:49:14 01/20/2022)</td></tr>
+<tr><td>0.455385</td></tr>
+<tr><td>0.45553500181995</td></tr>
+<tr><td>0.455496 </td></tr>
+<tr><td>0.45555525296368</td></tr>
+<tr><td>0.455607</td></tr>
+</table>
+</div>
+<div class="fchild">
+<table style="font-family: monospace" class="r1">
+<tr><td>&nbsp;&nbsp;12345678</td><td></td><td>decimal places</td></tr>
+<tr><td> 0.000090</td><td class="sign">+</td><td>clock offset / error</td></tr>
+<tr><td>0.0030</td><td class="sign">+</td><td>outgoing delay</td></tr>
+<tr><td>0.0032</td><td class="sign">+</td><td>incoming delay</td></tr>
+<tr><td>0.00000098</td><td></td><td>server   delay</td></tr>
+<tr><td>1 stratum</td><td></td><td colspan='1'>[2610:20:6f15:15::27] NIST</td></tr>
+<tr><td colspan='2'>822</td><td>seq</td></tr>
+</table>
+<table style="margin-top: 1ex" class="based"> 
+<tr><td>1642661350 (01:49:10 01/20/2022)</td></tr>
+<tr><td>0.263476</td></tr>
+<tr><td>0.26649356889538</td></tr>
+<tr><td>0.2665845 </td></tr>
+<tr><td>0.26649454585277</td></tr>
+<tr><td>0.269693</td></tr>
+</table>
+</div>
+<div class="fchild">
+<table style="font-family: monospace" class="r1">
+<tr><td>&nbsp;&nbsp;12345678</td><td></td><td>decimal places</td></tr>
+<tr><td> 0.000018</td><td class="sign">-</td><td>clock offset / error</td></tr>
+<tr><td>0.0049</td><td class="sign">+</td><td>outgoing delay</td></tr>
+<tr><td>0.0049</td><td class="sign">+</td><td>incoming delay</td></tr>
+<tr><td>0.00006885</td><td></td><td>server   delay</td></tr>
+<tr><td>2 stratum</td><td></td><td colspan='1'>ntp-4.vt.edu VATech</td></tr>
+<tr><td colspan='2'>821</td><td>seq</td></tr>
+</table>
+<table style="margin-top: 1ex" class="based"> 
+<tr><td>1642661320 (01:48:40 01/20/2022)</td></tr>
+<tr><td>0.879697</td></tr>
+<tr><td>0.88459386210889</td></tr>
+<tr><td>0.8846105 </td></tr>
+<tr><td>0.88466270803474</td></tr>
+<tr><td>0.889524</td></tr>
+</table>
+</div>
+<div class="fchild">
+<table style="font-family: monospace" class="r1">
+<tr><td>&nbsp;&nbsp;12345678</td><td></td><td>decimal places</td></tr>
+<tr><td> 0.000218</td><td class="sign">-</td><td>clock offset / error</td></tr>
+<tr><td>0.0031</td><td class="sign">+</td><td>outgoing delay</td></tr>
+<tr><td>0.0027</td><td class="sign">+</td><td>incoming delay</td></tr>
+<tr><td>0.00000227</td><td></td><td>server   delay</td></tr>
+<tr><td>1 stratum</td><td></td><td colspan='1'>[2610:20:6f15:15::26] NIST</td></tr>
+<tr><td colspan='2'>820</td><td>seq</td></tr>
+</table>
+<table style="margin-top: 1ex" class="based"> 
+<tr><td>1642660223 (01:30:23 01/20/2022)</td></tr>
+<tr><td>0.228127</td></tr>
+<tr><td>0.23125968291424</td></tr>
+<tr><td>0.2310425 </td></tr>
+<tr><td>0.23126195697114</td></tr>
+<tr><td>0.233958</td></tr>
+</table>
+</div>
+<div class="fchild">
+<table style="font-family: monospace" class="r1">
+<tr><td>&nbsp;&nbsp;12345678</td><td></td><td>decimal places</td></tr>
+<tr><td> 0.000099</td><td class="sign">-</td><td>clock offset / error</td></tr>
+<tr><td>0.0003</td><td class="sign">+</td><td>outgoing delay</td></tr>
+<tr><td>0.0001</td><td class="sign">+</td><td>incoming delay</td></tr>
+<tr><td>0.00001935</td><td></td><td>server   delay</td></tr>
+<tr><td>3 stratum</td><td></td><td colspan='1'>169.254.169.123 AWS-internal</td></tr>
+<tr><td colspan='2'>819</td><td>seq</td></tr>
+</table>
+<table style="margin-top: 1ex" class="based"> 
+<tr><td>1642660199 (01:29:59 01/20/2022)</td></tr>
+<tr><td>0.643825</td></tr>
+<tr><td>0.64407487493008</td></tr>
+<tr><td>0.643986 </td></tr>
+<tr><td>0.64409422595054</td></tr>
+<tr><td>0.644147</td></tr>
+</table>
+</div>
+<div class="fchild">
+<table style="font-family: monospace" class="r1">
+<tr><td>&nbsp;&nbsp;12345678</td><td></td><td>decimal places</td></tr>
+<tr><td> 0.000105</td><td class="sign">-</td><td>clock offset / error</td></tr>
+<tr><td>0.0034</td><td class="sign">+</td><td>outgoing delay</td></tr>
+<tr><td>0.0031</td><td class="sign">+</td><td>incoming delay</td></tr>
+<tr><td>0.00000103</td><td></td><td>server   delay</td></tr>
+<tr><td>1 stratum</td><td></td><td colspan='1'>[2610:20:6f15:15::27] NIST</td></tr>
+<tr><td colspan='2'>818</td><td>seq</td></tr>
+</table>
+<table style="margin-top: 1ex" class="based"> 
+<tr><td>1642660177 (01:29:37 01/20/2022)</td></tr>
+<tr><td>0.408861</td></tr>
+<tr><td>0.41221784381196</td></tr>
+<tr><td>0.4121135 </td></tr>
+<tr><td>0.41221887688152</td></tr>
+<tr><td>0.415366</td></tr>
+</table>
+</div>
+<div class="fchild">
+<table style="font-family: monospace" class="r1">
+<tr><td>&nbsp;&nbsp;12345678</td><td></td><td>decimal places</td></tr>
+<tr><td> 0.000102</td><td class="sign">-</td><td>clock offset / error</td></tr>
+<tr><td>0.0049</td><td class="sign">+</td><td>outgoing delay</td></tr>
+<tr><td>0.0047</td><td class="sign">+</td><td>incoming delay</td></tr>
+<tr><td>0.00004588</td><td></td><td>server   delay</td></tr>
+<tr><td>2 stratum</td><td></td><td colspan='1'>ntp-3.vt.edu VATech</td></tr>
+<tr><td colspan='2'>817</td><td>seq</td></tr>
+</table>
+<table style="margin-top: 1ex" class="based"> 
+<tr><td>1642660163 (01:29:23 01/20/2022)</td></tr>
+<tr><td>0.805867</td></tr>
+<tr><td>0.81076737702824</td></tr>
+<tr><td>0.810688 </td></tr>
+<tr><td>0.81081326003186</td></tr>
+<tr><td>0.815509</td></tr>
+</table>
+</div>
+<div class="fchild">
+<table style="font-family: monospace" class="r1">
+<tr><td>&nbsp;&nbsp;12345678</td><td></td><td>decimal places</td></tr>
+<tr><td> 0.000190</td><td class="sign">-</td><td>clock offset / error</td></tr>
+<tr><td>0.0049</td><td class="sign">+</td><td>outgoing delay</td></tr>
+<tr><td>0.0046</td><td class="sign">+</td><td>incoming delay</td></tr>
+<tr><td>0.00007603</td><td></td><td>server   delay</td></tr>
+<tr><td>2 stratum</td><td></td><td colspan='1'>ntp-2.vt.edu VATech</td></tr>
+<tr><td colspan='2'>816</td><td>seq</td></tr>
+</table>
+<table style="margin-top: 1ex" class="based"> 
+<tr><td>1642660067 (01:27:47 01/20/2022)</td></tr>
+<tr><td>0.73403</td></tr>
+<tr><td>0.73896038276143</td></tr>
+<tr><td>0.7388085 </td></tr>
+<tr><td>0.73903641756624</td></tr>
+<tr><td>0.743587</td></tr>
+</table>
+</div>
+<div class="fchild">
+<table style="font-family: monospace" class="r1">
+<tr><td>&nbsp;&nbsp;12345678</td><td></td><td>decimal places</td></tr>
+<tr><td> 0.000012</td><td class="sign">+</td><td>clock offset / error</td></tr>
+<tr><td>0.0031</td><td class="sign">+</td><td>outgoing delay</td></tr>
+<tr><td>0.0032</td><td class="sign">+</td><td>incoming delay</td></tr>
+<tr><td>0.00000249</td><td></td><td>server   delay</td></tr>
+<tr><td>1 stratum</td><td></td><td colspan='1'>[2610:20:6f15:15::26] NIST</td></tr>
+<tr><td colspan='2'>815</td><td>seq</td></tr>
+</table>
+<table style="margin-top: 1ex" class="based"> 
+<tr><td>1642660006 (01:26:46 01/20/2022)</td></tr>
+<tr><td>0.550421</td></tr>
+<tr><td>0.55356441694312</td></tr>
+<tr><td>0.553578 </td></tr>
+<tr><td>0.55356690194458</td></tr>
+<tr><td>0.556735</td></tr>
+</table>
+</div>
+<div class="fchild">
+<table style="font-family: monospace" class="r1">
+<tr><td>&nbsp;&nbsp;12345678</td><td></td><td>decimal places</td></tr>
+<tr><td> 0.000138</td><td class="sign">-</td><td>clock offset / error</td></tr>
+<tr><td>0.0048</td><td class="sign">+</td><td>outgoing delay</td></tr>
+<tr><td>0.0046</td><td class="sign">+</td><td>incoming delay</td></tr>
+<tr><td>0.00006705</td><td></td><td>server   delay</td></tr>
+<tr><td>2 stratum</td><td></td><td colspan='1'>ntp-1.vt.edu VATech</td></tr>
+<tr><td colspan='2'>814</td><td>seq</td></tr>
+</table>
+<table style="margin-top: 1ex" class="based"> 
+<tr><td>1642659985 (01:26:25 01/20/2022)</td></tr>
+<tr><td>0.919962</td></tr>
+<tr><td>0.92479827976786</td></tr>
+<tr><td>0.9246935 </td></tr>
+<tr><td>0.92486533196643</td></tr>
+<tr><td>0.929425</td></tr>
+</table>
+</div>
+<div class="fchild">
+<table style="font-family: monospace" class="r1">
+<tr><td>&nbsp;&nbsp;12345678</td><td></td><td>decimal places</td></tr>
+<tr><td> 0.000067</td><td class="sign">-</td><td>clock offset / error</td></tr>
+<tr><td>0.0002</td><td class="sign">+</td><td>outgoing delay</td></tr>
+<tr><td>0.0000</td><td class="sign">+</td><td>incoming delay</td></tr>
+<tr><td>0.00001954</td><td></td><td>server   delay</td></tr>
+<tr><td>3 stratum</td><td></td><td colspan='1'>169.254.169.123 AWS-internal</td></tr>
+<tr><td colspan='2'>813</td><td>seq</td></tr>
+</table>
+<table style="margin-top: 1ex" class="based"> 
+<tr><td>1642659853 (01:24:13 01/20/2022)</td></tr>
+<tr><td>0.704276</td></tr>
+<tr><td>0.70445521594957</td></tr>
+<tr><td>0.704398 </td></tr>
+<tr><td>0.70447476091795</td></tr>
+<tr><td>0.70452</td></tr>
+</table>
+</div>
+</div>
+	</div> <!-- the whole dynamic output of SNTP -->
+</body>
+</html>

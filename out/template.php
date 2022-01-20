@@ -35,12 +35,14 @@
     </style>
 </head>
 <body>
+	<div> <!-- the whole dynamic output of SNTP -->
     <?php 
 }
 	require_once('out.php');
 	echo sntp_report::report($dao); 
 	if (PHP_SAPI !== 'cli') {
     ?>
+	</div> <!-- the whole dynamic output of SNTP -->
 </body>
 </html>
 <?php }
