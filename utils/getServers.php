@@ -8,8 +8,8 @@ class ntpServerPool {
     
     public static function get($dao) {
 	
-	if (isAWS()) $myloc = 'VA';
-	else         $myloc = 'GA';
+	$myloc = 'VA';
+	// $myloc = 'GA';
 	
 	$host = $dao->get($myloc);
 	if ($host === 0) {
@@ -35,8 +35,9 @@ class ntpServerPool {
     		'[2610:20:6f15:15::27]'	    
 	];
 	
-	if (!isAWS()) $nisths = array_merge($nist4, $nist6);
-	else          $nisths = $nist6;
+	// if (!is****AWS()) 
+		$nisths = array_merge($nist4, $nist6);
+	// else          $nisths = $nist6;
 	
 	$a['NIST'] = [
 	    'minpoll' => 4,

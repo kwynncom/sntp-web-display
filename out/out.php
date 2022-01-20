@@ -80,14 +80,15 @@ public static function sum($data, $dao) {
     }
     $ht .= '</table>' . "\n";
     
-    $avg  = ($sum / $i);
+	if ($i > 0) $avg  = ($sum / $i);
+	else	    $avg  = $sum;
     $davg = sprintf('%0.5f', $avg);
     
     $avgdb = $dao->getAvg(self::displim, self::dispsince);
-    
-    $ad = abs($avgdb[1]['sum'] - $sum);
-    
-    kwas( $ad < 0.0000003 ,'db and loc calc do not match');
+    if (isset($avgdb[1])) {
+		$ad = abs($avgdb[1]['sum'] - $sum);
+        kwas( $ad < 0.0000003 ,'db and loc calc do not match');
+	}
     
     $aht = self::getAvgHT($avgdb);
    

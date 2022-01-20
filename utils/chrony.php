@@ -31,9 +31,6 @@ public static function get() {
     $sn = [];
     $sn['rid'] = $matches[2];
     
-    if (isAWS() && $sn['rid'] === '169.254.169.123') $sn['rname'] = 'AWS EC2 Time Sync Service';
-    else $sn['rname'] = '';
-    
     $key = 'Ref time (UTC)';
     kwas(isset($a[$key]), 'no UTC ref time');
     

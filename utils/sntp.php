@@ -111,7 +111,7 @@ public static function mtstoa($sin) { // microtime-stamp to array
 public static function veryRecentTSOrDie($iin) {
     static $now = false;
     if ($now === false) $now = time();
-    kwas(!(abs($iin - $now) > 20 && isAWS()), 'timestamps too far off');
+    kwas(!(abs($iin - $now) > 20), 'timestamps too far off');
 }
 
 private static function calcs($r) {

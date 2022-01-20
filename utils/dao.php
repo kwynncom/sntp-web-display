@@ -55,8 +55,8 @@ class dao_sntp extends dao_generic {
 	static $lims = false;
 	static $now  = false;
 	
-	if (!$lims &&  isAWS())  $lims = [ 60 =>  6, 3600 =>  20, 86400 =>  60];
-	if (!$lims && !isAWS())  $lims = [ 60 => 20, 3600 => 100, 86400 => 150];
+	if (!$lims)  $lims =					[ 60 =>  6, 3600 =>  20, 86400 =>  60];
+	// if (!$lims && !is****AWS())  $lims = [ 60 => 20, 3600 => 100, 86400 => 150];
 	
 	if (!$now) $now = time();
 	
@@ -70,8 +70,8 @@ class dao_sntp extends dao_generic {
     
     public function get($loc) {	
 
-	if (time() < strtotime('2019-11-26 20:59') && !isAWS()) 
-	    return $this->uheadcoll->findOne(['host' => '[2610:20:6f15:15::26]']);
+	/* if (time() < strtotime('2019-11-26 20:59') && !is***AWS()) 
+	    return $this->uheadcoll->findOne(['host' => '[2610:20:6f15:15::26]']); */
 	
 	if ($this->uheadcoll->count() === 0) return 0;
 	
@@ -143,8 +143,11 @@ class dao_sntp extends dao_generic {
 	$ra = $this->rcoll->aggregate($q)->toArray();
 	$aa = $this->rcoll->aggregate([$group])->toArray();
 	
-	$r[] = $aa[0];
-	$r[] = $ra[0];
+	$r = [];
+	if (isset($aa[0]))
+	$r[] =    $aa[0];
+	if (isset($ra[0]))
+	$r[] =    $ra[0];
 		
 	return $r;
 	
