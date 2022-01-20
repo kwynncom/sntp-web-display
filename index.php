@@ -1,6 +1,6 @@
 <?php
 
-require_once('utils/kwutils.php');
+require_once('/opt/kwynn/kwutils.php');
 require_once('utils/getServers.php');
 require_once('utils/sntp.php');
 require_once('out/out.php');

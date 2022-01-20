@@ -1,6 +1,6 @@
 <?php
 
-require_once('kwutils.php');
+require_once('/opt/kwynn/kwutils.php');
 
 class dao_sntp extends dao_generic {
     

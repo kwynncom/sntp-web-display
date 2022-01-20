@@ -51,7 +51,7 @@ public static function sum($data, $dao) {
     $sum = 0;
     $i = 0;
     
-    $hht .= '<tr><th>cld</th><th>outd</th><th>ind</th><th>fam</th><th>host</th><th>st</th>';
+    $hht .= '<tr><th>cld</th><th>outd</th><th>ind</th><th>fam</th><th>host</th><th>st</th><th colspan="2"></th>' . "\n";
     
     $ht = '';
     
@@ -112,6 +112,8 @@ private static function getAvgHT($din) {
 	
 	$x = 2;
     }
+	
+	$ht .= '</table>' . "\n";
     
     return $ht;
 }
@@ -168,7 +170,7 @@ public static function report($dao) {
 
 	$ht .= '<tr><td>' . sprintf('%0.8f', $r['srvd']) . "</td><td></td><td>server   delay</td></tr>\n";
 
-	$ht .= "<tr><td>$st stratum</td><td></td><td colspan='2'>$dat[host] $dat[name]</td><tr>\n";
+	$ht .= "<tr><td>$st stratum</td><td></td><td colspan='1'>$dat[host] $dat[name]</td></tr>\n";
 	$ht .= "<tr><td colspan='2'>$dat[seq]</td><td>seq</td></tr>\n";
 	$ht .= '</table>' . "\n";
 

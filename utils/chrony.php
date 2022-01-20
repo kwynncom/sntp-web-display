@@ -1,6 +1,6 @@
 <?php // note this is part of sntp and sun / sun/snyc - harmonized 2020/01/07 00:32am
 
-require_once('kwutils.php');
+require_once('/opt/kwynn/kwutils.php');
 
 if (isset($_REQUEST['getOffsetOnly'])) {
     $r = chrony_parse::get();

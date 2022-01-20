@@ -1,6 +1,6 @@
 <?php
 
-require_once('kwutils.php');
+require_once('/opt/kwynn/kwutils.php');
 
 class fra_kw_sntp {
     
